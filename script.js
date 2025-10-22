@@ -136,7 +136,7 @@ const questions = [
     {
         question: "Como se escreve um comentário de uma linha em JavaScript?",
         answers: [
-            { text: "", correct: false },
+            { text: "//coment", correct: false },
             { text: "/* comentário */", correct: false },
             { text: "** comentário **", correct: false },
             { text: "// comentário", correct: true }
@@ -284,4 +284,5 @@ function reiniciarQuiz() {
 // --- Event Listeners ---
 startButton.addEventListener('click', comecarQuiz);
 nextButton.addEventListener('click', irParaProxima);
+
 restartButton.addEventListener('click', reiniciarQuiz);
