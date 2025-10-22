@@ -1,0 +1,113 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+}
+
+/* Telas (Oculta todas por padrão) */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Tela de Início */
+#start-screen input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botões */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.hide {
+    display: none;
+}
+
+/* Layout das Alternativas */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-grid .btn {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.btn-grid .btn.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-grid .btn.wrong {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-grid .btn:hover {
+    background-color: #e2e6ea;
+}
+
+/* Controles e Gráfico */
+.controls {
+    margin-top: 20px;
+}
+
+.chart-container {
+    margin-top: 30px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .btn-grid {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 20px;
+    }
+}

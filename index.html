@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <h1>Bem-vindo ao Quiz!</h1>
+            <p>Insira seu nome para começar:</p>
+            <input type="text" id="username" placeholder="Seu nome aqui">
+            <button id="start-button">Começar</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div id="question-container">
+                <h2 id="question-text">Texto da Pergunta</h2>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Alternativa 1</button>
+                    <button class="btn">Alternativa 2</button>
+                    <button class="btn">Alternativa 3</button>
+                    <button class="btn">Alternativa 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="next-button" class="next-btn hide">Próxima</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1>Quiz Finalizado!</h1>
+            <h2 id="result-username"></h2>
+            <p>Acertos: <span id="correct-answers">0</span></p>
+            <p>Erros: <span id="wrong-answers">0</span></p>
+            <p>Aproveitamento: <span id="score-percentage">0</span>%</p>
+            <h3 id="performance-message"></h3>
+            
+            <div class="chart-container">
+                <canvas id="performance-chart"></canvas>
+            </div>
+            
+            <button id="restart-button">Tentar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
